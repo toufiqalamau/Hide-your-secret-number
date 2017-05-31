@@ -1,4 +1,5 @@
 alpha=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+#you can change these lists with letters from any language or even can set your own list of things.
 
 def crypt():
     code=int(raw_input('Please type the number you want to hide: '))
