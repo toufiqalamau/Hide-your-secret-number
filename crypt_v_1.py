@@ -1,8 +1,7 @@
 alpha=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-#you can change these lists with letters from any language or even can set your own list of things.
 
 def crypt():
-    code=int(raw_input('Please type the number you want to hide: '))
+    code=int(raw_input('Please type the number you want to hide. \n\'0\' at the beginning of your number will be discarded: '))
     key=int(raw_input('type a prime number of your choice: '))
     mod=int(code%key)
     quotient=int(code//key)
@@ -31,9 +30,6 @@ def decrypt():
     code=(key*quotient)+mod
     print 'This is the number you hid: ',code,'.'
     return code
-
-q=raw_input(' Please select what you want the program to do?\n1. Hide number.\n2. Show the numebr.\nYour choice: ')
-
 while True:
     try:
         q1=[1,2]
@@ -44,7 +40,7 @@ while True:
                     crypt()
                 elif i==2:
                     decrypt()
-        
+      
     except ValueError:
-        print 'nope. wrong answer.'
-
+        print 'nope. wrong answer. Type 1 or 2.'
+        
