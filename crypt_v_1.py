@@ -1,6 +1,3 @@
-
-
-
 alpha=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 def crypt():
@@ -36,8 +33,17 @@ def decrypt():
 
 q=raw_input(' Please select what you want the program to do?\n1. Hide number.\n2. Show the numebr.\nYour choice: ')
 
-if q=='1':
-    crypt()
-else:
-    decrypt()
-            
+while True:
+    try:
+        q1=[1,2]
+        q=int(raw_input('Please select what you want the program to do?\n1. Hide number.\n2. Show the numebr.\nYour choice: '))
+        for i in q1:
+            if q==i:
+                if i==1:
+                    crypt()
+                elif i==2:
+                    decrypt()
+        
+    except ValueError:
+        print 'nope. wrong answer.'
+
